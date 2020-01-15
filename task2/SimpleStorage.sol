@@ -2,10 +2,20 @@ pragma solidity ^0.5.11;
 
 contract SimpleStorage {
     uint256 private data;
-    
+    address private owner;
+
     event newData(uint256 x);
 
-    function setData(uint256 x) public {
+    constructor() public {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
+
+    function setData(uint256 x) onlyOwner public {
         data = x;
         emit newData(x);
     }
