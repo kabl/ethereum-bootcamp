@@ -16,13 +16,12 @@ contract SafeMath {
 
 contract MyContract is SafeMath {
 
-    private uint256 _amount
-    
+    uint256 private _amount;
+    212
     function addAmount(uint256 amount) 
-        returns (bool) 
+        public returns (bool) 
     {
         _amount = super.add(_amount, amount);
-
         return true;
     }
 }
