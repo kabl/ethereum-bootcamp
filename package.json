@@ -7,7 +7,14 @@
     "test": "test"
   },
   "scripts": {
-    "test": "truffle test"
+    "test": "truffle test",
+    "build": "truffle compile",
+    "flat": "truffle-flattener ./contracts/task4_solution/BootcampTokenSolution.sol > ./BootcampTokenFlat.sol",
+    "lint": "solhint \"contracts/*.sol\"",
+    "prettier": "prettier --write **/*.sol",
+    "coverage": "solidity-coverage",
+    "ganache": "ganache-cli -m \"pilot regular prize ridge spy reduce boil trick cigar maple million wall\"",
+    "graph": "surya inheritance ./contracts/*.sol | dot -Tpng > graph.png"
   },
   "repository": {
     "type": "git",

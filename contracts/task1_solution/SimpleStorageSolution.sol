@@ -1,6 +1,6 @@
 pragma solidity ^0.5.11;
 
-contract SimpleStorage {
+contract SimpleStorageSolution {
     uint256 private data;
     address private owner;
 
@@ -15,7 +15,7 @@ contract SimpleStorage {
         _;
     }
 
-    function setData(uint256 x) onlyOwner public {
+    function setData(uint256 x) public onlyOwner {
         data = x;
         emit newData(x);
     }

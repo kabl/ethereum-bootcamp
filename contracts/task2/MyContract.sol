@@ -1,12 +1,7 @@
 pragma solidity ^0.5.11;
 
 contract SafeMath {
-    
-    function add(uint256 a, uint256 b) 
-        internal 
-        pure 
-        returns (uint256) 
-    {
+    function add(uint256 a, uint256 b) internal pure returns (uint256) {
         uint256 c = a + b;
         require(c >= a, "SafeMath: addition overflow");
 
@@ -15,12 +10,9 @@ contract SafeMath {
 }
 
 contract MyContract is SafeMath {
-
     uint256 private _amount;
-    212
-    function addAmount(uint256 amount) 
-        public returns (bool) 
-    {
+
+    function addAmount(uint256 amount) public returns (bool) {
         _amount = super.add(_amount, amount);
         return true;
     }

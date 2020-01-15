@@ -15,7 +15,7 @@ contract SimpleStorage {
         _;
     }
 
-    function setData(uint256 x) onlyOwner public {
+    function setData(uint256 x) public onlyOwner {
         data = x;
         emit newData(x);
     }

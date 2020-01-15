@@ -15,10 +15,10 @@ contract Ownable {
 
 contract SimpleStorageInheritance is Ownable {
     uint256 private _data;
-    
+
     event newData(uint256 data);
 
-    function setData(uint256 data) onlyOwner public {
+    function setData(uint256 data) public onlyOwner {
         _data = data;
         emit newData(data);
     }
