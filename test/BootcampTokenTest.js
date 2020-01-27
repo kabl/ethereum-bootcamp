@@ -1,6 +1,6 @@
-var BCT = artifacts.require("./BootcampTokenSolution.sol");
 var Web3 = require("web3");
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+const BCT = artifacts.require("./task4_solution/BootcampTokenSolution.sol");
 
 contract("BootcampTokenSolutionTest", accounts => {
   var owner = accounts[0];

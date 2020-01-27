@@ -1,4 +1,4 @@
-pragma solidity ^0.5.11;
+pragma solidity ^0.5.16;
 
 contract SafeMath {
     function add(uint256 a, uint256 b) internal pure returns (uint256) {
@@ -9,7 +9,7 @@ contract SafeMath {
     }
 }
 
-contract MyContract is SafeMath {
+contract ExampleContract is SafeMath {
     uint256 private _amount;
 
     function addAmount(uint256 amount) public returns (bool) {

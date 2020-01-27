@@ -1,4 +1,4 @@
-pragma solidity ^0.5.11;
+pragma solidity ^0.5.16;
 
 contract MappingDemo {
     // address represents the owner, uint256 the balance
