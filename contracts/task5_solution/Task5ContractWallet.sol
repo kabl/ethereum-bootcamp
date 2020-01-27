@@ -7,7 +7,7 @@ contract Task5ContractWallet {
         owner = msg.sender;
     }
 
-    function () external payable {}
+    function() external payable {}
 
     function withdrawal(uint256 amount) public returns (bool) {
         require(msg.sender == owner, "wrong sender");
