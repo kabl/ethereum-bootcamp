@@ -17,3 +17,15 @@ npm run ganache
 # On command line 2
 npm run test
 ```
+
+Expected output
+```
+BootcampToken Contract: 0xd21b49D91D761c2AAb403b7ae23Bbe3F91941c6E
+
+
+  Contract: BootcampTokenSolutionTest
+    ✓ Mint (178ms)
+
+
+  1 passing (278ms)
+```
