@@ -18,7 +18,7 @@ contract BootcampTokenSolution is ERC20, ERC20Detailed, ERC20Mintable, Ownable {
     }
 
     function payOut() public onlyOwner {
-        address recipient = msg.sender;
+        address payable recipient = msg.sender;
         address contractInstance = address(this);
         require(recipient.send(contractInstance.balance), "PayOut failed");
     }
