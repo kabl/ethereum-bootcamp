@@ -29,3 +29,15 @@ BootcampToken Contract: 0xd21b49D91D761c2AAb403b7ae23Bbe3F91941c6E
 
   1 passing (278ms)
 ```
+
+## Update Repo
+
+Update the dependencies in package.json
+
+```bash
+# Update all versions in package.json
+ncu -u
+## Hint: openzeppelin-solidity version should not change
+
+npm update
+```
