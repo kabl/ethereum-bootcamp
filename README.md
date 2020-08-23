@@ -2,6 +2,14 @@
 
 Code snippets for the Ethereum Bootcamp.
 
+## Tasks
+
+- Task 1: Only owner
+- Task 2: Inheritance
+- Task 3: Mapping / Token (Truffle)
+- Task 4: ERC-20 / OpenZeppelin
+- Task 5: Contract Wallet / Fallback Function
+
 ## Installation
 
 Required software

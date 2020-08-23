@@ -39,6 +39,18 @@ contract Task3TokenSolution is Ownable, SafeMath {
         _balances[msg.sender] = 100000;
     }
 
+    function mint(address recipient, uint256 amount)
+        public
+        onlyOwner
+        returns (bool)
+    {
+        _balances[recipient] = add(_balances[recipient], amount);
+        _totalSupply = add(_totalSupply, amount);
+        emit Transfer(address(0x0), recipient, amount);
+
+        return true;
+    }
+
     function transfer(address recipient, uint256 amount) public returns (bool) {
         require(_balances[msg.sender] >= amount, "sender not enough tokens");
         _balances[msg.sender] = sub(_balances[msg.sender], amount);
