@@ -1,4 +1,6 @@
-pragma solidity ^0.5.16;
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.11;
 
 contract SimpleStorage {
     uint256 private data;
@@ -6,7 +8,7 @@ contract SimpleStorage {
 
     event newData(uint256 x);
 
-    constructor() public {
+    constructor() {
         owner = msg.sender;
     }
 

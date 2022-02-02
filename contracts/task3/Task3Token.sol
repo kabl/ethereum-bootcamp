@@ -1,9 +1,10 @@
-pragma solidity ^0.5.16;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.11;
 
 contract Task3Token {
     mapping(address => uint256) _balances;
 
-    constructor() public {
+    constructor() {
         _balances[msg.sender] = 100000;
     }
 

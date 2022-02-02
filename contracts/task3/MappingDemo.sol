@@ -1,4 +1,5 @@
-pragma solidity ^0.5.16;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.11;
 
 contract MappingDemo {
     // address represents the owner, uint256 the balance

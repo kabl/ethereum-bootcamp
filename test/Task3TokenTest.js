@@ -2,8 +2,8 @@ var Web3 = require("web3");
 const truffleAssert = require('truffle-assertions');
 var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
-// const SimpleToken = artifacts.require("./contracts/task3_solution/Task3TokenSolution.sol");
-const SimpleToken = artifacts.require("./contracts/task3/Task3Token.sol");
+const SimpleToken = artifacts.require("./contracts/task3_solution/Task3TokenSolution.sol");
+//const SimpleToken = artifacts.require("./contracts/task3/Task3Token.sol");
 
 
 contract("Task3TokenTest", accounts => {

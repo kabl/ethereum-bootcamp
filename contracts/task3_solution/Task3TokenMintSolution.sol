@@ -1,9 +1,10 @@
-pragma solidity ^0.5.16;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.11;
 
 contract Ownable {
     address private owner;
 
-    constructor() public {
+    constructor() {
         owner = msg.sender;
     }
 
@@ -13,29 +14,13 @@ contract Ownable {
     }
 }
 
-contract SafeMath {
-    function add(uint256 a, uint256 b) internal pure returns (uint256) {
-        uint256 c = a + b;
-        require(c >= a, "SafeMath: addition overflow");
-
-        return c;
-    }
-
-    function sub(uint256 a, uint256 b) internal pure returns (uint256) {
-        require(b <= a, "SafeMath: subtraction overflow");
-        uint256 c = a - b;
-
-        return c;
-    }
-}
-
-contract Task3TokenSolution is Ownable, SafeMath {
+contract Task3TokenSolution is Ownable {
     mapping(address => uint256) private _balances;
     uint256 private _totalSupply;
 
     event Transfer(address indexed from, address indexed to, uint256 value);
 
-    constructor() public {
+    constructor() {
         _balances[msg.sender] = 100000;
     }
 
@@ -44,8 +29,8 @@ contract Task3TokenSolution is Ownable, SafeMath {
         onlyOwner
         returns (bool)
     {
-        _balances[recipient] = add(_balances[recipient], amount);
-        _totalSupply = add(_totalSupply, amount);
+        _balances[recipient] = _balances[recipient] + amount;
+        _totalSupply = _totalSupply + amount;
         emit Transfer(address(0x0), recipient, amount);
 
         return true;
@@ -53,8 +38,8 @@ contract Task3TokenSolution is Ownable, SafeMath {
 
     function transfer(address recipient, uint256 amount) public returns (bool) {
         require(_balances[msg.sender] >= amount, "sender not enough tokens");
-        _balances[msg.sender] = sub(_balances[msg.sender], amount);
-        _balances[recipient] = add(_balances[recipient], amount);
+        _balances[msg.sender] = _balances[msg.sender] - amount;
+        _balances[recipient] = _balances[recipient] + amount;
 
         emit Transfer(msg.sender, recipient, amount);
         return true;
