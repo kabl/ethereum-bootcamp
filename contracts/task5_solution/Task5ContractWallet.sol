@@ -19,4 +19,8 @@ contract Task5ContractWallet {
         owner.transfer(amount);
         return true;
     }
+
+    function balance() public view returns (uint256) {
+        return address(this).balance;
+    }
 }

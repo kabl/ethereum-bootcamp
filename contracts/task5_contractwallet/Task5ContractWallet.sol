@@ -16,4 +16,8 @@ contract Task5ContractWallet {
         // TODO: check ownership
         // TODO: send the amount to the owners address
     }
+
+    function balance() public view returns (uint256) {
+        return address(this).balance;
+    }
 }

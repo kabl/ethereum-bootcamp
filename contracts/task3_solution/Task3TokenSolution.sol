@@ -1,20 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.11;
 
-contract Ownable {
-    address private owner;
 
-    constructor() {
-        owner = msg.sender;
-    }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner);
-        _;
-    }
-}
-
-contract Task3TokenSolution is Ownable {
+contract Task3TokenSolution {
     mapping(address => uint256) private _balances;
     uint256 private _totalSupply;
 
